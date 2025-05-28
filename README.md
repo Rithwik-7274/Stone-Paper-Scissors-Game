@@ -94,6 +94,8 @@ Images were obtained from the sources below and converted to ascii art using [jp
 * **Paper:** https://icon-icons.com/icon/document-duplicate-page-paper/124766
 * **VS icon:** https://openclipart.org/detail/349242/versus-pictogram
 
+*Overall project assistance was provided by Gemini.*
+
 ## License
 
 This project is licensed under the **GPL-3.0-or-later** license. See the `LICENSE` file for the full license text.
