@@ -8,44 +8,45 @@ A command-line implementation of the classic Stone-Paper-Scissors game against a
 
 ![Win message](images/image-2.png)
 
-## Dependencies
+> **IMPORTANT DISPLAY NOTE:** To ensure the ASCII art and game UI fit perfectly on your screen without wrapping, you may need to adjust your terminal's zoom level. Use `Ctrl` + `+` or `-` (Linux/Windows) or `Cmd` + `+` or `-` (macOS) to scale the content properly.
 
-To compile and run this game, you will need -
+## Installation
 
-* **A C Compiler:** Such as GCC (GNU Compiler Collection). Needed for compiling C files.
-    * **Arch Linux:** `sudo pacman -S gcc`
-    * **Debian/Ubuntu:** `sudo apt-get install gcc`
-    * **Fedora/RHEL/CentOS:** `sudo dnf install gcc`
-    * **macOS:** `xcode-select --install`
-* **`figlet` utility -** Displays the final win / loss message.
-    * **Arch Linux:** `sudo pacman -S figlet`
-    * **Debian/Ubuntu:** `sudo apt install figlet`
-    * **Fedora/RHEL/CentOS:** `sudo dnf install figlet`
-    * **macOS (Homebrew):** `brew install figlet`
+### Method 1: Arch Linux (via AUR)
+If you are on Arch Linux, the game is available on the Arch User Repository. You can install it using your favorite AUR helper (such as `yay` or `paru`):
+```bash
+yay -S stone-paper-scissors
+```
 
-## Installation & Setup
+### Method 2: Linux, MacOS and WSL (via Homebrew)
+The easiest way to install the game on macOS or other Linux distributions is using Homebrew: 
+```shell
+brew tap Rithwik-7274/stone-paper-scissors
+brew install stone-paper-scissors
+```
 
-1.  **Clone the repository (or download the source code) -**
-    ```bash
+### Method 3: Build from Source
+If you prefer to compile the game manually, follow these steps:
+
+1. **Install Dependencies -**
+Ensure you have gcc and the figlet utility installed.
+    - **Arch Linux:** `sudo pacman -S gcc figlet`
+    - **Debian/Ubuntu:** `sudo apt-get install gcc figlet`
+    - **Fedora/RHEL/CentOS:** `sudo dnf install gcc figlet`
+    - **macOS:** `xcode-select --install` and `brew install figlet`
+
+2. **Clone and Compile -**
+    ```shell
     git clone https://github.com/Rithwik-7274/Stone-Paper-Scissors-Game
-    cd stone-paper-scissors-game
+    cd Stone-Paper-Scissors-Game
+    make
     ```
-    If you've downloaded a `.zip` file, extract it and navigate into the project directory.
-
-2.  **Compile the source code :**
-    Open your terminal in the project's directory and run 
-    ```bash
-    gcc Stone-Paper-Scissors.c -o Stone-Paper-Scissors -std=c11
-    ```
-    * `-o Stone-Paper-Scissors`: Specifies the output executable name.
-    * `-std=c11`: Compiles the code using the C11 standard.
 
 ## How to Play
 
-1.  **Run the executable -**
-    ```bash
-    ./Stone-Paper-Scissors
-    ```
+1.  **Run the executable:**  If installed via -  
+    - AUR/Homebrew, simply type `stone-paper-scissors` anywhere in your terminal.  
+    - If compiled from source, run `./Stone-Paper-Scissors` in the Stone-Paper-Scissors-Game directory.
 
 2.  **Enter your player name:**
     The game will prompt you to enter your player name.
@@ -66,6 +67,7 @@ To compile and run this game, you will need -
 * `README.md`: This file.
 * `LICENSE`: Contains the license used for the project.
 * `Images/`: Contains visuals used in README.md
+* `Makefile`: Contains make instructions.
 
 ## Doxygen Documentation
 
@@ -77,13 +79,15 @@ This project's code is thoroughly documented using Doxygen. You can generate and
     * **Fedora/RHEL/CentOS:** `sudo dnf install doxygen graphviz`
     * **macOS (Homebrew):** `brew install doxygen graphviz` 
 
-2.  **Navigate to the project directory and run Doxygen -**
-    ```bash
-    cd /path/to/the/repository
+2.  **Clone and navigate to the project directory and run Doxygen -**
+    ```shell
+    git clone https://github.com/Rithwik-7274/Stone-Paper-Scissors-Game
+    cd Stone-Paper-Scissors-Game
     doxygen
     ```
-5.  **View the documentation:**
-    Open `docs/html/index.html`.
+
+3.  **View the documentation:**
+    Open `./docs/html/index.html`.
 
 ## Credits
 
